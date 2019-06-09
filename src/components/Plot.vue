@@ -7,7 +7,6 @@
 <script>
 import Highcharts from './Highcharts';
 import { cloneDeep } from 'lodash';
-import util from './util';
 
 export default {
   name: 'Plot',
