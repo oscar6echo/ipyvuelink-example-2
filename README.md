@@ -16,7 +16,7 @@ Then the following extra configuration was applied:
   - `vue add vuetify`
   - with default options
 
-- add dev packages `yarn add xxx`:
+- add packages `yarn add xxx`:
   - vuex
   - lodash
   - highcharts
