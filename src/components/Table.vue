@@ -155,7 +155,23 @@ export default {
       ];
 
       this.rowDataTable = rowDataTable;
-      this.$store.dispatch('setExposed', rowDataTable);
+
+      const firstRow = rowDataTable[0];
+      const lastRow = rowDataTable[rowDataTable.length - 1];
+      const exposed = {
+        extent: {
+          first: {
+            no: firstRow.no,
+            date: firstRow.date
+          },
+          last: {
+            no: lastRow.no,
+            date: lastRow.date
+          },
+          measure: lastRow
+        }
+      };
+      this.$store.dispatch('setExposed', exposed);
 
       if (this.dims.wide) {
         this.autosizeColumns();

@@ -1,5 +1,7 @@
 # ipyvuelink-example-2
 
+![](img/ipyvuelink-example-2.png)
+
 ## 1 - Bootstapping
 
 This project is generated via [@vue/cli](https://cli.vuejs.org/) with the following manually selected features:
@@ -13,8 +15,7 @@ This project is generated via [@vue/cli](https://cli.vuejs.org/) with the follow
 Then the following extra configuration was applied:
 
 - add vuetify plugin:
-  - `vue add vuetify`
-  - with default options
+  - `vue add vuetify` with default options
 
 - add packages `yarn add xxx`:
   - vuex
