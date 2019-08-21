@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import store from './components/store';
 import Plot from './components/Plot';
 import Table from './components/Table';
 import util from './components/util';
@@ -55,6 +56,9 @@ export default {
   components: {
     Plot,
     Table
+  },
+  beforeCreate() {
+    this.$store = store();
   },
   data() {
     return {
@@ -111,6 +115,7 @@ export default {
     exposed: function() {
       console.log('SYNC TO PYTHON - exposed updated');
       console.log(this.exposed);
+      this.$emit('exposed', this.exposed);
       //   this.dataModel.set('exposed', this.exposed);
       //   this.dataModel.save_changes();
       //   this.dataModel.touch();
