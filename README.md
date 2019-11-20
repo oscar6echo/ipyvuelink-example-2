@@ -17,6 +17,9 @@ Then the following extra configuration was applied:
 - add vuetify plugin:
   - `vue add vuetify` with default options
 
+- remove vuetify-loader:
+  - `yarn remove vuetify-loader`
+
 - add packages `yarn add xxx`:
   - vuex
   - lodash
