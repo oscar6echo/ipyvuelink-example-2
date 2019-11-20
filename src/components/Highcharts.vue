@@ -1,5 +1,5 @@
 <template>
-  <div id="my-chart"></div>
+  <div :id="`my-chart-${generated_id}`"></div>
 </template>
 
 <script>
@@ -19,7 +19,8 @@ export default {
     return {
       chart: null,
       style: '',
-      graphOptions: {}
+      graphOptions: {},
+      generated_id: Math.random()
     };
   },
   computed: {},
@@ -43,7 +44,7 @@ export default {
     updateChart() {
       this.graphOptions = cloneDeep(this.graphOptionsInput);
       if (this.chart) this.chart.destroy();
-      this.chart = Highcharts.stockChart('my-chart', this.graphOptions);
+      this.chart = Highcharts.stockChart(`my-chart-${this.generated_id}`, this.graphOptions);
     }
   }
 };
